@@ -1,12 +1,20 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import VerificationOTPScreen from "@/components/VerificationOTPScreen";
+import { router } from "expo-router";
 
-const Otp = () => {
+const OtpConfirm = () => {
+  const handleOtpConfirmation = (otpCode: string) => {
+    router.push("/(auth)/new-password");
+  };
+
   return (
-    <View>
-      <Text>Otp</Text>
-    </View>
-  )
-}
+    <VerificationOTPScreen
+      title="OTP"
+      description="To reset you account, please enter the verification code you get on your e-mail."
+      onConfirm={handleOtpConfirmation}
+      backRoute="/(auth)/forgot-password"
+      showBackButton={true}
+    />
+  );
+};
 
-export default Otp
+export default OtpConfirm;
