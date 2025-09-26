@@ -12,8 +12,8 @@ export default function Index() {
   return (
     <View className="flex-1 justify-center items-center">
       <Image
-        source={require("../../assets/images/splashicon.png")}
-        className="w-52 h-52"
+        source={require("../../assets/images/android-icon-splash.png")}
+        className="w-64 h-64"
         resizeMode="contain"
       />
     </View>
