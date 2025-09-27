@@ -1,5 +1,4 @@
 import { ActivePill, InactiveIcon } from "@/components/TabBarIcon";
-import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 
 export default function AppLayout() {
