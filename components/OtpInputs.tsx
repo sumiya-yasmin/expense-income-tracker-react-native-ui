@@ -1,19 +1,26 @@
 import { useRef } from "react";
 import { TextInput, View } from "react-native";
 
-const OtpInputs = ({ otp, setOtp }: { otp: string[], setOtp: (newOtp: string[]) => void }) => {
-  const inputs = Array(6).fill(0).map((_, i) => useRef<TextInput>(null));
+const OtpInputs = ({
+  otp,
+  setOtp,
+}: {
+  otp: string[];
+  setOtp: (newOtp: string[]) => void;
+}) => {
+  const inputs = Array(6)
+    .fill(0)
+    .map((_, i) => useRef<TextInput>(null));
 
   const handleChange = (text: string, index: number) => {
     const newOtp = [...otp];
-    newOtp[index] = text.slice(-1); 
+    newOtp[index] = text.slice(-1);
     setOtp(newOtp);
 
-    
     if (text && index < 5) {
       inputs[index + 1].current?.focus();
     }
-    
+
     if (!text && index > 0) {
       inputs[index - 1].current?.focus();
     }

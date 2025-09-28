@@ -1,6 +1,6 @@
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import { useEffect } from "react";
-import { Image, Text, View } from "react-native";
+import { Image, View } from "react-native";
 
 export default function Index() {
   useEffect(() => {

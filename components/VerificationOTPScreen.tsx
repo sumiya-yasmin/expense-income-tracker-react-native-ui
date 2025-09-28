@@ -12,8 +12,6 @@ interface VerificationOTPProps {
   showBackButton?: boolean;
 }
 
-
-
 const VerificationOTPScreen = ({
   title,
   description,

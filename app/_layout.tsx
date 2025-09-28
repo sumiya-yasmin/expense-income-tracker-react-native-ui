@@ -23,20 +23,19 @@ function RootLayoutContent() {
         options={{ headerShown: false }}
         redirect={isAuthenticated}
       />
-       <Stack.Screen
+      <Stack.Screen
         name="(app)"
         options={{ headerShown: false }}
         redirect={!isAuthenticated}
       />
-      
     </Stack>
   );
 }
 
-export default function RootLayout(){
-  return(
+export default function RootLayout() {
+  return (
     <AuthProvider>
-      <RootLayoutContent/>
+      <RootLayoutContent />
     </AuthProvider>
-  )
+  );
 }
