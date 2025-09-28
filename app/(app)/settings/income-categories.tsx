@@ -1,12 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
 
-const IncomeCategories = () => {
+import { Stack } from "expo-router";
+import { INCOME_CATEGORY_ICONS } from "@/Data";
+import CategoryEditor from "@/components/CategoryEditor";
+
+export default function IncomeCategories() {
   return (
-    <View>
-      <Text>IncomeCategories</Text>
-    </View>
-  )
+    <>
+      <Stack.Screen options={{ headerShown: false }} />
+      <CategoryEditor
+        title="Income Categories"
+        initialCategories={INCOME_CATEGORY_ICONS}
+      />
+    </>
+  );
 }
-
-export default IncomeCategories
