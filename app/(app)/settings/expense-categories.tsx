@@ -1,12 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
 
-const ExpenseCategories = () => {
+import { Stack } from "expo-router";
+import { EXPENSE_CATEGORY_ICONS } from "@/Data";
+import CategoryEditor from "@/components/CategoryEditor";
+
+export default function ExpenseCategories() {
   return (
-    <View>
-      <Text>ExpenseCategories</Text>
-    </View>
-  )
+    <>
+      <Stack.Screen options={{ headerShown: false }} />
+      <CategoryEditor
+        title="Expenses Categories"
+        initialCategories={EXPENSE_CATEGORY_ICONS}
+      />
+    </>
+  );
 }
-
-export default ExpenseCategories
