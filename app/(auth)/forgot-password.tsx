@@ -7,12 +7,12 @@ const ForgotPassword = () => {
   const handleForgotPassword = () => {
     router.push("/(auth)/otp");
   };
-  const goBack=()=>{
-    router.push("/(auth)/login")
-  }
+  const goBack = () => {
+    router.push("/(auth)/login");
+  };
   return (
     <View className="flex-1 bg-white p-6 pt-12">
-      <BackButton onPress={goBack}/>
+      <BackButton onPress={goBack} />
       <Text className="text-3xl font-bold text-gray-800 text-start mb-4 mt-8">
         Forgot Password
       </Text>
@@ -25,7 +25,7 @@ const ForgotPassword = () => {
         placeholder="consultme@gmail.com"
         keyboardType="email-address"
         autoCapitalize="none"
-        className="border border-gray-300 p-4 rounded-xl mb-4 text-base"
+        className="border border-gray-300 p-4 rounded-xl mb-4 text-base text-gray-800"
       />
       <TouchableOpacity
         onPress={handleForgotPassword}

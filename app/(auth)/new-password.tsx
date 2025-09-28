@@ -4,15 +4,15 @@ import { router } from "expo-router";
 import BackButton from "@/components/BackButton";
 
 const NewPassword = () => {
- const handleNewPassword = () => {
+  const handleNewPassword = () => {
     router.push("/(auth)/login");
   };
-  const goBack=()=>{
-    router.push("/(auth)/login")
-  }
+  const goBack = () => {
+    router.push("/(auth)/login");
+  };
   return (
     <View className="flex-1 bg-white p-6 pt-12">
-      <BackButton onPress={goBack}/>
+      <BackButton onPress={goBack} />
       <Text className="text-3xl font-bold text-gray-800 text-start mb-4 mt-8">
         New Password
       </Text>
@@ -23,15 +23,14 @@ const NewPassword = () => {
       <TextInput
         placeholder="********"
         secureTextEntry
-        className="border border-gray-300 p-4 rounded-xl mb-4 text-base"
+        className="border border-gray-300 p-4 rounded-xl mb-4 text-base text-gray-800"
       />
 
-     
       <Text className="text-base text-green-500 mb-1">Confirm Password</Text>
       <TextInput
         placeholder="********"
         secureTextEntry
-        className="border border-gray-300 p-4 rounded-xl mb-8 text-base"
+        className="border border-gray-300 p-4 rounded-xl mb-8 text-base text-gray-800"
       />
       <TouchableOpacity
         onPress={handleNewPassword}
@@ -42,6 +41,6 @@ const NewPassword = () => {
       </TouchableOpacity>
     </View>
   );
-}
+};
 
-export default NewPassword
+export default NewPassword;
